@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar Obat</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Daftar Obat</h1>
+    <table border="1">
+        <tr>
+            <th>Nama Obat</th>
+            <th>Fungsi</th>
+        </tr>
+        {% for obat in data_obat %}
+        <tr>
+            <td>{{ obat.nama }}</td>
+            <td>{{ obat.fungsi }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <br>
+    <a href="/">Kembali ke Beranda</a>
+</body>
+</html>
